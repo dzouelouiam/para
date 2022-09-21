@@ -12,7 +12,7 @@ router.post('/add',auth.authenticateToken,checkRole.checkRole,(req,res)=>{
             return res.status(200).json({message:"Product Added Successfully"});
         }
         else{
-            return res.status(500);json(err);
+            return res.status(500).json(err);
         }
     })
 })
